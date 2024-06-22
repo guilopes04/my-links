@@ -15,7 +15,7 @@ interface User {
 
 const App: React.FC = () => {
   const user: User = {
-    imageSrc: process.env.PUBLIC_URL + '/foto_insta.jpg', // Caminho da imagem na pasta public
+    imageSrc: process.env.PUBLIC_URL + '/user_photo.jpg', // Caminho da imagem na pasta public
     name: 'Guilherme Lopes',
     role: 'Desenvolvedor Back-End',
     buttonLinks: [
