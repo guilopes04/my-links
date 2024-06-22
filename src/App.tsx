@@ -1,7 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
-import UserImage from './components/UserImage'
-import UserName from './components/UserName'
 import MainDiv from './components/MainDiv'
 import ButtonLink, { ButtonLinkProps } from './components/ButtonLink'
 import UserInfo from './components/UserInfo'
@@ -14,6 +12,18 @@ interface User {
 }
 
 const App: React.FC = () => {
+  let apiCalled = false
+  useEffect(() => {
+    const api =
+      'https://rvpf4aupl8.execute-api.us-east-1.amazonaws.com/v1/site-access'
+    if (!apiCalled) {
+      fetch(api, {
+        method: 'POST'
+      })
+    }
+    apiCalled = true
+  }, [])
+
   const user: User = {
     imageSrc: process.env.PUBLIC_URL + '/user_photo.jpg', // Caminho da imagem na pasta public
     name: 'Guilherme Lopes',
