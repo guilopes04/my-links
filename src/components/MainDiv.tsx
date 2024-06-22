@@ -14,7 +14,7 @@ const MainDiv = styled.div`
     max-width: 100%; /* Permite que a div ocupe toda a largura disponível */
     margin: 0% auto; /* Mantém a margem de 3% superior e inferior e centraliza horizontalmente */
     border-radius: 0%;
-    min-height: 89.7vh;
+    min-height: 82.8vh;
   }
 `
 

@@ -8,6 +8,9 @@ export interface UserNameProps {
 
 const NameContainer = styled.h2`
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `
 
 const UserName: React.FC<UserNameProps> = ({ name }) => (

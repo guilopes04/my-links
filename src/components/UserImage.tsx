@@ -10,15 +10,23 @@ export interface UserImageProps {
 const ImageContainer = styled.div`
   margin-bottom: 10%; /* Adiciona espaço inferior para afastar dos elementos abaixo */
   width: 100%; /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+
+  img {
+    width: 50%; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 25%;
+
+    @media (max-width: 768px) {
+      width: 65%; /* Reduz a largura da imagem em dispositivos móveis */
+    }
+  }
 `
 
 const UserImage: React.FC<UserImageProps> = ({ src, alt }) => (
   <ImageContainer>
-    <img
-      src={src}
-      alt={alt}
-      style={{ width: '100%', height: '100%', borderRadius: '25%' }}
-    />
+    <img src={src} alt={alt} />
   </ImageContainer>
 )
 
