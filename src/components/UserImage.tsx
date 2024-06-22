@@ -16,7 +16,7 @@ const ImageContainer = styled.div`
   img {
     width: 50%; /* Define a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
-    border-radius: 25%;
+    border-radius: 15%;
 
     @media (max-width: 768px) {
       width: 65%; /* Reduz a largura da imagem em dispositivos móveis */
