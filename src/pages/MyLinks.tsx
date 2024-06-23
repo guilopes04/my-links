@@ -23,6 +23,11 @@ const user: User = {
       text: 'GitHub',
       link: 'https://github.com/guilopes04',
       icon: 'github'
+    },
+    {
+      text: 'Currículo/CV',
+      link: 'https://github.com/guilopes04',
+      icon: 'pdf'
     }
   ]
 }

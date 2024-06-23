@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaLinkedin, FaGithub } from 'react-icons/fa' // Importe os ícones desejados
+import { FaLinkedin, FaGithub, FaBehance, FaFilePdf } from 'react-icons/fa' // Importe os ícones desejados
 import { IconType } from 'react-icons'
 
 export interface ButtonLinkProps {
   text: string
   link: string
-  icon?: 'linkedin' | 'github' // Adicione um tipo para o ícone
+  icon?: 'linkedin' | 'github' | 'behance' | 'pdf'
 }
 
 const ButtonComponent = styled.a`
@@ -40,6 +40,12 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({ text, link, icon }) => {
       break
     case 'github':
       IconComponent = FaGithub
+      break
+    case 'behance':
+      IconComponent = FaBehance
+      break
+    case 'pdf':
+      IconComponent = FaFilePdf
       break
     default:
       break
