@@ -9,11 +9,10 @@ const MainDiv = styled.div`
 
   @media (max-width: 768px) {
     /* Ajustes para dispositivos móveis */
-    padding: 5rem 3rem; /* Reduz padding para 3rem superior e inferior, 2rem esquerda e direita */
+    padding: 2rem 3rem; /* Reduz padding para 3rem superior e inferior, 2rem esquerda e direita */
     max-width: 100%; /* Permite que a div ocupe toda a largura disponível */
     margin: 0% auto; /* Mantém a margem de 3% superior e inferior e centraliza horizontalmente */
     border-radius: 0%;
-    min-height: 82.8vh;
   }
 `
 
