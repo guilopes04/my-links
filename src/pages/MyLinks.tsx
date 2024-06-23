@@ -27,7 +27,7 @@ const user: User = {
     {
       text: 'Currículo/CV',
       downloadName: 'guilhermelopes_cv',
-      link: '/my-cv.pdf',
+      link: '/guilhermelopes_cv.pdf',
       icon: 'pdf'
     }
   ]
