@@ -6,7 +6,6 @@ const MainDiv = styled.div`
   max-width: 15rem; /* Largura máxima da div para navegadores */
   margin: 3% auto; /* Margem de 3% superior e inferior e 'auto' para centralizar horizontalmente para navegadores */
   border-radius: 2%;
-  max-height: 65vh; /* Altura máxima da div */
 
   @media (max-width: 768px) {
     /* Ajustes para dispositivos móveis */

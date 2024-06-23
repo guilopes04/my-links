@@ -1,38 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaLinkedin, FaGithub, FaBehance, FaFilePdf } from 'react-icons/fa' // Importe os ícones desejados
+import {
+  FaLinkedin,
+  FaGithub,
+  FaBehance,
+  FaFilePdf,
+  FaAppleAlt
+} from 'react-icons/fa' // Importe os ícones desejados
 import { IconType } from 'react-icons'
+import ButtonComponent from './ButtonComponent'
 
 export interface ButtonLinkProps {
   text: string
   link: string
   icon?: 'linkedin' | 'github' | 'behance' | 'pdf'
+  downloadName?: string
 }
 
-const ButtonComponent = styled.a`
-  display: flex; /* Mostra o botão como um flex container */
-  align-items: center; /* Alinha itens verticalmente */
-  justify-content: center; /* Centraliza conteúdo horizontalmente */
-  padding: 15px 20px;
-  background-color: black;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: rgb(221, 221, 221);
-  transition: background-color 0.3s ease;
-  margin-bottom: 1.5rem; /* Adiciona espaço entre os botões */
-  &:hover {
-    background-color: rgb(84, 84, 84);
-  }
-
-  svg {
-    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
-  }
-`
-
-const ButtonLink: React.FC<ButtonLinkProps> = ({ text, link, icon }) => {
-  let IconComponent: IconType | null = null
+const ButtonLink: React.FC<ButtonLinkProps> = ({
+  text,
+  link,
+  icon,
+  downloadName
+}) => {
+  let IconComponent: IconType = FaAppleAlt
 
   switch (icon) {
     case 'linkedin':
@@ -52,10 +43,12 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({ text, link, icon }) => {
   }
 
   return (
-    <ButtonComponent href={link} target="_blank" rel="noopener noreferrer">
-      {IconComponent && <IconComponent size={20} />}
-      {text}
-    </ButtonComponent>
+    <ButtonComponent
+      href={link}
+      icon={IconComponent}
+      text={text}
+      downloadName={downloadName}
+    ></ButtonComponent>
   )
 }
 

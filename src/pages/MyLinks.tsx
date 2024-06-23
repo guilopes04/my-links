@@ -26,7 +26,8 @@ const user: User = {
     },
     {
       text: 'Currículo/CV',
-      link: 'https://github.com/guilopes04',
+      downloadName: 'guilhermelopes_cv',
+      link: '/my-cv.pdf',
       icon: 'pdf'
     }
   ]
@@ -48,6 +49,7 @@ const MyLinks: React.FC = () => {
             text={buttonLink.text}
             link={buttonLink.link}
             icon={buttonLink.icon}
+            downloadName={buttonLink.downloadName}
           />
         ))}
     </MainDiv>

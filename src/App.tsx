@@ -3,34 +3,33 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import MyLinks from './pages/MyLinks'
 
 const App: React.FC = () => {
-  const [apiCalled, setApiCalled] = useState(false)
+  // const [apiCalled, setApiCalled] = useState(false)
 
-  useEffect(() => {
-    const callApi = async () => {
-      try {
-        const api =
-          'https://rvpf4aupl8.execute-api.us-east-1.amazonaws.com/v1/site-access'
+  // useEffect(() => {
+  //   const callApi = async () => {
+  //     try {
+  //       const api = ''
 
-        if (!apiCalled) {
-          const response = await fetch(api, {
-            method: 'POST'
-          })
+  //       if (!apiCalled) {
+  //         const response = await fetch(api, {
+  //           method: 'POST'
+  //         })
 
-          if (response.ok) {
-            console.log('API call successful')
-          } else {
-            console.error('API call failed')
-          }
+  //         if (response.ok) {
+  //           console.log('API call successful')
+  //         } else {
+  //           console.error('API call failed')
+  //         }
 
-          setApiCalled(true)
-        }
-      } catch (error) {
-        console.error('Error calling API:', error)
-      }
-    }
+  //         setApiCalled(true)
+  //       }
+  //     } catch (error) {
+  //       console.error('Error calling API:', error)
+  //     }
+  //   }
 
-    callApi()
-  }, [apiCalled])
+  //   callApi()
+  // }, [apiCalled])
 
   return (
     <Router>
