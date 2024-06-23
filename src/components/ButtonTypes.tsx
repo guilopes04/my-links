@@ -53,7 +53,6 @@ const DownloadButton: React.FC<ButtonProps> = ({
   text,
   downloadName
 }) => {
-  console.log('downloadName', downloadName)
   return (
     <Button
       href={href}
