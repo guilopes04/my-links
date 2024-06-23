@@ -52,15 +52,18 @@ const DownloadButton: React.FC<ButtonProps> = ({
   icon: IconComponent,
   text,
   downloadName
-}) => (
-  <Button
-    href={href}
-    download={downloadName ? downloadName : text}
-    style={{ textDecoration: 'none' }}
-  >
-    {IconComponent && <IconComponent size={20} />}
-    {text}
-  </Button>
-)
+}) => {
+  console.log('downloadName', downloadName)
+  return (
+    <Button
+      href={href}
+      download={downloadName ? downloadName : text}
+      style={{ textDecoration: 'none' }}
+    >
+      {IconComponent && <IconComponent size={20} />}
+      {text}
+    </Button>
+  )
+}
 
 export { RedirectButton, DownloadButton }
