@@ -17,7 +17,7 @@ const ButtonComponent = styled.a`
   background-color: black;
   text-decoration: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   color: rgb(221, 221, 221);
   transition: background-color 0.3s ease;
